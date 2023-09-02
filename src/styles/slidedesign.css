@@ -1,0 +1,72 @@
+/* App.css */
+.App {
+         text-align: center;
+         padding: 20px;
+       }
+       
+       /* ImageSlider.css */
+       .slider-container {
+         border:2px solid black;
+        display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content:center;
+         margin:auto;
+         width:50%;
+       }
+       
+       .slider-images {
+         display: flex;
+         border:4px solid black;
+         justify-content: center;
+         align-items: center;
+         margin: 10px 0;
+         width:border-width;
+       }
+       
+       .slider-image {
+        display:flex;
+         width:100%;
+         height: 100%;
+         margin: 0 10px;
+         border: 2px solid #ddd;
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         opacity: 0;
+         transition: opacity 0.3s ease-in-out;
+       }
+       .slider-image:hover{
+        transform:scale(1.2)
+       }
+       
+       .slider-image.active {
+         opacity: 1;
+       }
+       
+       .slider-button {
+         background-color: #007bff;
+         color: white;
+         border: none;
+         padding: 10px 20px;
+         margin: 5px;
+         cursor: pointer;
+         font-size: 14px;
+         flex-direction:row;
+       }
+       
+       .slider-button:hover {
+         background-color: #0056b3;
+       }
+       
+       .slider-button:disabled {
+         background-color: #ccc;
+         cursor: not-allowed;
+       }
+       
+       /* Centering buttons on smaller screens */
+       @media (max-width: 600px) {
+         .slider-button {
+           margin: 5px auto;
+           display: block;
+         }
+       }
+       
